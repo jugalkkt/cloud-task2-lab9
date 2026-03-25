@@ -1,5 +1,8 @@
 provider "kubernetes" {
-  config_path = "~/.kube/config"
+  host                   = "https://fake-cluster"
+  client_certificate     = "fake"
+  client_key             = "fake"
+  cluster_ca_certificate = "fake"
 }
 
 resource "kubernetes_manifest" "openfaas_function" {
